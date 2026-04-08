@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>City List</title>
+
+<style>
+body {
+    background: black;
+    font-family: Arial;
+    color: yellow;
+    text-align: center;
+}
+
+/* 顶部导航 */
+.nav {
+    padding: 20px;
+    border-bottom: 2px solid cyan;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* 城市条 */
+.city {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #00ffff;
+    position: relative;
+}
+
+/* 左右光效 */
+.city::before,
+.city::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(to right, cyan, transparent);
+}
+
+.city::after {
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.city::before {
+    left: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+    <a href="#">HOME</a>
+    <a href="#">CONTACT</a>
+</div>
+
+<div class="city">Alor Setar 亚罗士打</div>
+<div class="city">Sungai Petani 双溪大年</div>
+<div class="city">Penang George Town 槟城 乔治市</div>
+<div class="city">Bukit Mertajam 大山脚</div>
+<div class="city">Langkawi 兰卡威</div>
+<div class="city">Kulim 居林</div>
+<div class="city">Kuantan 关丹</div>
+
+</body>
+</html>
