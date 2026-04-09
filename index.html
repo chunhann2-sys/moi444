@@ -3,101 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City List</title>
+    <title>City List - Sakura Style</title>
 
     <style>
         body {
-            background: black;
+            /* 1. 背景：改用极浅的樱花粉白，看起来干净清爽 */
+            background: #fffafa; /* Snow White, 有淡淡粉意 */
             font-family: Arial, sans-serif;
-            color: hotpink;
+            /* 3. 文字：使用深玫瑰色，确保清晰度 */
+            color: #d02090; /* MediumVioletRed */
             text-align: center;
             margin: 0;
             padding-bottom: 50px;
         }
 
-        /* 顶部导航容器 */
+        /* 顶部导航容器：去掉边框，改用淡淡的蜜桃粉 */
         .nav {
-            padding: 20px;
-            border-bottom: 2px solid hotpink;
-            margin-bottom: 30px;
-            background: rgba(255, 20, 147, 0.05);
+            padding: 15px;
+            background: #ffe4e1; /* MistyRose */
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(208, 32, 144, 0.1); /* 淡淡的粉色阴影 */
         }
 
-        /* HOME 按钮样式 */
+        /* HOME 按钮样式：改用深色，去掉发光 */
         .nav a {
-            color: pink;
+            color: #b03060; /* Maroon */
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            text-shadow: 0 0 5px hotpink;
+            font-size: 15px;
             transition: 0.3s;
             display: inline-block;
             vertical-align: middle;
         }
 
-        /* 鼠标指上去的效果：变白并发强光 */
+        /* 鼠标指上去的效果：文字变亮粉色 */
         .nav a:hover {
-            color: white;
-            text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff;
+            color: #ff1493; /* DeepPink */
             transform: scale(1.1);
         }
 
-        /* 导航内的图标样式 */
+        /* 导航内的图标样式：减小尺寸，加粉色投影 */
         .nav img {
-            width: 30px;
+            width: 25px;
             margin: 0 10px;
             vertical-align: middle;
             transition: 0.3s;
+            filter: drop-shadow(0 0 3px rgba(208, 32, 144, 0.3)); /* 图标光晕 */
         }
         
         .nav img:hover {
-            filter: drop-shadow(0 0 8px hotpink);
+            filter: drop-shadow(0 0 6px hotpink);
             transform: scale(1.2);
         }
 
-        /* 城市条链接容器 */
+        /* 城市条链接容器：增加间距 */
         .city-link {
             display: block;
             text-decoration: none;
             color: inherit;
-            margin: 15px auto;
-            width: 90%;
-            max-width: 800px;
+            margin: 10px auto;
+            width: 85%;
+            max-width: 650px; /* 减小最大宽度，看起来不那么宽 */
         }
 
-        /* 城市条盒子 */
+        /* 城市条盒子：2. 改用实心淡粉色圆角矩形，去掉发光和边框 */
         .city {
-            padding: 20px;
-            border-top: 2px solid hotpink;
-            border-bottom: 2px solid hotpink;
+            padding: 18px;
+            background: #ffb6c1; /* LightPink */
+            border-radius: 10px; /* 圆角矩形 */
             position: relative;
-            background: rgba(255, 20, 147, 0.02);
             transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(208, 32, 144, 0.1); /* 添加微妙阴影增加立体感 */
         }
 
         .city:hover {
-            background: rgba(255, 20, 147, 0.1);
+            background: #ffc0cb; /* Pink, 悬停时稍微变浅 */
+            transform: translateY(-2px); /* 悬停时向上浮动 */
+            box-shadow: 0 6px 12px rgba(208, 32, 144, 0.15); /* 加强阴影 */
         }
 
-        /* 左右粉色渐变光效 */
+        /* 左右光效：去掉，保持清爽 */
         .city::before,
         .city::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 80px;
-            height: 100%;
-            pointer-events: none; /* 防止遮挡点击 */
-        }
-
-        .city::before {
-            left: 0;
-            background: linear-gradient(to right, hotpink, transparent);
-        }
-
-        .city::after {
-            right: 0;
-            background: linear-gradient(to left, hotpink, transparent);
+            display: none; /* 去掉左右渐变光 */
         }
     </style>
 </head>
