@@ -4,30 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City List - Sakura Style</title>
-
     <style>
         body {
-            /* 1. 背景：改用极浅的樱花粉白，看起来干净清爽 */
-            background: #fffafa; /* Snow White, 有淡淡粉意 */
+            background: #fffafa;
             font-family: Arial, sans-serif;
-            /* 3. 文字：使用深玫瑰色，确保清晰度 */
-            color: #d02090; /* MediumVioletRed */
+            color: #d02090;
             text-align: center;
             margin: 0;
             padding-bottom: 50px;
         }
 
-        /* 顶部导航容器：去掉边框，改用淡淡的蜜桃粉 */
+        /* 顶部导航容器 */
         .nav {
             padding: 15px;
-            background: #ffe4e1; /* MistyRose */
+            background: #ffe4e1;
             margin-bottom: 40px;
-            box-shadow: 0 2px 5px rgba(208, 32, 144, 0.1); /* 淡淡的粉色阴影 */
+            box-shadow: 0 2px 5px rgba(208, 32, 144, 0.1);
         }
 
-        /* HOME 按钮样式：改用深色，去掉发光 */
+        /* 导航链接 */
         .nav a {
-            color: #b03060; /* Maroon */
+            color: #b03060;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
@@ -37,71 +34,65 @@
             vertical-align: middle;
         }
 
-        /* 鼠标指上去的效果：文字变亮粉色 */
         .nav a:hover {
-            color: #ff1493; /* DeepPink */
+            color: #ff1493;
             transform: scale(1.1);
         }
 
-        /* 导航内的图标样式：减小尺寸，加粉色投影 */
+        /* 导航图标 */
         .nav img {
             width: 25px;
             margin: 0 10px;
             vertical-align: middle;
             transition: 0.3s;
-            filter: drop-shadow(0 0 3px rgba(208, 32, 144, 0.3)); /* 图标光晕 */
+            filter: drop-shadow(0 0 3px rgba(208, 32, 144, 0.3));
         }
-        
+
         .nav img:hover {
             filter: drop-shadow(0 0 6px hotpink);
             transform: scale(1.2);
         }
 
-        /* 城市条链接容器：增加间距 */
+        /* 城市列表项 */
         .city-link {
             display: block;
             text-decoration: none;
             color: inherit;
             margin: 10px auto;
             width: 85%;
-            max-width: 650px; /* 减小最大宽度，看起来不那么宽 */
+            max-width: 650px;
         }
 
-        /* 城市条盒子：2. 改用实心淡粉色圆角矩形，去掉发光和边框 */
         .city {
             padding: 18px;
-            background: #ffb6c1; /* LightPink */
-            border-radius: 10px; /* 圆角矩形 */
+            background: #ffb6c1;
+            border-radius: 10px;
             position: relative;
             transition: 0.3s;
-            box-shadow: 0 4px 8px rgba(208, 32, 144, 0.1); /* 添加微妙阴影增加立体感 */
+            box-shadow: 0 4px 8px rgba(208, 32, 144, 0.1);
         }
 
         .city:hover {
-            background: #ffc0cb; /* Pink, 悬停时稍微变浅 */
-            transform: translateY(-2px); /* 悬停时向上浮动 */
-            box-shadow: 0 6px 12px rgba(208, 32, 144, 0.15); /* 加强阴影 */
-        }
-
-        /* 左右光效：去掉，保持清爽 */
-        .city::before,
-        .city::after {
-            display: none; /* 去掉左右渐变光 */
+            background: #ffc0cb;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(208, 32, 144, 0.15);
         }
     </style>
 </head>
-
 <body>
 
     <div class="nav">
         <a href="index.html">HOME</a>
-        
         <a href="https://t.me/Ciknurul444" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
         </a>
         <a href="https://wa.me/601112754296" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
         </a>
+    </div>
+
+<div style="text-align: center; padding: 10px;">
+        <img src="top.jpg" alt="Banner" style="width: 95%; max-width: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(208, 32, 144, 0.2);">
     </div>
 
     <a href="https://t.me/s/alorsetararea" class="city-link" target="_blank">
